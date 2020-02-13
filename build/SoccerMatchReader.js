@@ -2,11 +2,16 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 // ONE VERSION OF REUSABLE CODE USING INTERFACES
 var utils_1 = require("./utils");
+var CsvFileReader_1 = require("./CsvFileReader");
 var SoccerMatchReader = /** @class */ (function () {
     function SoccerMatchReader(reader) {
         this.reader = reader;
         this.matches = [];
     }
+    SoccerMatchReader.fromCsv = function (filename) {
+        // Default creation of SoccerMatchReader using Csv file
+        return new SoccerMatchReader(new CsvFileReader_1.CsvFileReader(filename));
+    };
     SoccerMatchReader.prototype.load = function () {
         // Get the 2D array of strings from whichever reader (CSV, API, whatever we want)
         this.reader.read();
