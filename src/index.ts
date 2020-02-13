@@ -1,22 +1,11 @@
-import { NumbersCollection } from './NumbersCollection';
-import { CharactersCollection } from './CharactersCollection';
-import { LinkedList } from './LinkedList';
+import { CsvFileReader } from './CsvFileReader';
 
-// Test sorting number array
-const numbersCollection = new NumbersCollection([3, 4, 15, 10]);
-numbersCollection.sort();
-console.log(numbersCollection.data);
+const reader = new CsvFileReader('football.csv');
+reader.read();
 
-// Test sorting string
-const charactersCollection = new CharactersCollection('aXabb');
-charactersCollection.sort();
-console.log(charactersCollection.data);
-
-// Test sorting linked list
-const linkedList = new LinkedList();
-linkedList.add(500);
-linkedList.add(-10);
-linkedList.add(3);
-linkedList.add(4);
-linkedList.sort();
-linkedList.print();
+// Use an enum to create a reference for related values
+enum MatchResult {
+  HomeWine = 'H',
+  AwayWin = 'A',
+  Draw = 'D'
+}
