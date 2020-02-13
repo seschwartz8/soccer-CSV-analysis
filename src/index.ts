@@ -1,7 +1,12 @@
 import { CsvFileReader } from './CsvFileReader';
-import { MatchResult } from './MatchResult';
 import { SoccerMatchReader } from './SoccerMatchReader';
 
-const reader = new SoccerMatchReader('football.csv');
-reader.read();
-console.log(reader.data);
+// Create an object that satisfies the "DataReader" interface (this allows flexibility for reading from different sources, like APIs, CSV etc.)
+const csvFileReader = new CsvFileReader('football.csv');
+
+// Create an instance of MatchReader and pass in something satisfying the "DataReader" interface
+const soccerMatchReader = new SoccerMatchReader(csvFileReader);
+
+// Read/parse data from source
+soccerMatchReader.load();
+console.log(soccerMatchReader.matches);

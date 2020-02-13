@@ -1,3 +1,5 @@
+// ONE VERSION OF REUSABLE CODE USING INHERITANCE
+
 // Import fs module from node standard library for reading CSV files
 import fs from 'fs';
 

@@ -1,4 +1,5 @@
 "use strict";
+// ONE VERSION OF REUSABLE CODE USING INHERITANCE
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
