@@ -1,5 +1,5 @@
 "use strict";
-// ONE VERSION OF REUSABLE CODE USING INTERFACES
+// ONE VERSION OF REUSABLE CODE USING INHERITANCE
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -14,7 +14,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var CsvFileReaderInheritance_1 = require("./Alternative inheritance option/CsvFileReaderInheritance");
+var CsvFileReaderInheritance_1 = require("./CsvFileReaderInheritance");
 var utils_1 = require("./utils");
 var SoccerMatchReader = /** @class */ (function (_super) {
     __extends(SoccerMatchReader, _super);

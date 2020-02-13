@@ -1,6 +1,6 @@
-// ONE VERSION OF REUSABLE CODE USING INTERFACES
+// ONE VERSION OF REUSABLE CODE USING INHERITANCE
 
-import { CsvFileReader } from './Alternative inheritance option/CsvFileReaderInheritance';
+import { CsvFileReader } from './CsvFileReaderInheritance';
 import { dateStringToDate } from './utils';
 import { MatchResult } from './MatchResult';
 
